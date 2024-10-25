@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>User Data</title>
+        <link
+            rel="shortcut icon"
+            href="./Assets/logo.svg"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="navbar-container">
+            <nav id="navbar">
+                <div id="logo-container">
+                    <img
+                        src="./Assets/logo.svg"
+                        alt="a logo of user icon with gear"
+                    />
+                    <h1>User Database</h1>
+                </div>
+                <div id="new-user-button">Add new User</div>
+            </nav>
+        </div>
+        <div id="wrapper">
+            <div id="main-container">
+                <!-- FORM -->
+                <form id="form-container">
+                    <!-- BIO SECTION -->
+                    <section id="bio-section">
+                        <!-- Profile Picture -->
+                        <label for="profile-picture">Profile Picture</label>
+                        <input
+                            type="file"
+                            id="profile-picture"
+                            name="profile-picture"
+                        />
+                        <!-- Name -->
+                        <div>
+                            <label for="first-name">First Name</label>
+                            <input
+                                type="text"
+                                name="first-name"
+                                id="first-name"
+                            />
+                            <label for="middle-name">Middle Name</label>
+                            <input
+                                type="text"
+                                name="middle-name"
+                                id="middle-name"
+                            />
+                            <label for="last-name">Last Name</label>
+                            <input
+                                type="text"
+                                name="last-name"
+                                id="last-name"
+                            />
+                        </div>
+                        <!-- Gender -->
+                        <label>Gender</label>
+                        <input
+                            type="radio"
+                            name="gender"
+                            id="male"
+                            value="male"
+                        />
+                        <label for="male">Male</label>
+                        <input
+                            type="radio"
+                            name="gender"
+                            id="female"
+                            value="female"
+                        />
+                        <label for="female">Female</label>
+                        <input
+                            type="radio"
+                            name="gender"
+                            id="not-specified"
+                            value="not-specified"
+                        />
+                        <label for="not-specified">Prefer not to say</label>
+                        <!-- Age -->
+                        <label for="age">Age</label>
+                        <input type="number" name="age" id="age" />
+                    </section>
+                    <!-- CONTACT SECTION -->
+                    <section id="contact-section">
+                        <!-- Phone -->
+                        <label for="phone-number">Contact Number</label>
+                        <input
+                            type="tel"
+                            name="phone-number"
+                            id="phone-number"
+                        />
+                        <!-- Email -->
+                        <label for="email">Email Address</label>
+                        <input type="email" name="email" id="email" />
+                        <!-- Password -->
+                        <div>
+                            <label for="password">Password</label>
+                            <input
+                                type="password"
+                                name="password"
+                                id="password"
+                            />
+                            <label for="confirm-password"
+                                >Confirm Password</label
+                            >
+                            <input
+                                type="password"
+                                name="confirm-password"
+                                id="confirm-password"
+                            />
+                        </div>
+                    </section>
+                    <!-- ADDRESS SECTION -->
+                    <section id="address-section">
+                        <label for="address">Address</label>
+                        <input type="text" name="address" id="address" />
+                        <label for="city">City</label>
+                        <input type="text" name="city" id="city" />
+                        <label for="state">State</label>
+                        <input type="text" name="state" id="state" />
+                        <label for="country">Country</label>
+                        <select name="country" id="country">
+                            <option value="United States">United States</option>
+                            <option value="Canada">Canada</option>
+                            <option value="United Kingdom">
+                                United Kingdom
+                            </option>
+                            <option value="Germany">Germany</option>
+                            <option value="France">France</option>
+                            <option value="Japan">Japan</option>
+                            <option value="China">China</option>
+                            <option value="India">India</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Brazil">Brazil</option>
+                        </select>
+                        <label for="zip-code">Zip Code</label>
+                        <input type="text" name="zip-code" id="zip-code" />
+                    </section>
+                    <input type="submit" value="Submit" />
+                </form>
+                <!-- IMAGE -->
+                <div id="image-container">
+                    <img
+                        id="imgg"
+                        src="./Assets/signupImage.webp"
+                        alt="a robot viewing data"
+                    />
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
