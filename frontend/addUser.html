@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>User Database</title>
+        <link
+            rel="shortcut icon"
+            href="../assets/logo.svg"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="addUser.css" />
+    </head>
+
+    <body>
+        <header id="navbar-container">
+            <nav id="navbar">
+                <a href="#">
+                    <div id="logo-container">
+                        <img
+                            src="../assets/logo.svg"
+                            alt="a logo of user icon with gear"
+                        />
+                        <h1>User Database</h1>
+                    </div></a
+                >
+                <div id="navbar-button-container">
+                    <div id="new-user-button">
+                        <p>Add new user</p>
+                    </div>
+                    <div id="all-users-button">
+                        <p>View all users</p>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div id="wrapper">
+            <div id="main-container">
+                <!-- FORM -->
+                <form id="form-container">
+                    <!-- BIO SECTION -->
+                    <!-- Profile Picture -->
+                    <div class="label-and-input">
+                        <label for="profile-picture">Profile Picture</label>
+                        <input
+                            type="file"
+                            id="profile-picture"
+                            name="profile-picture"
+                        />
+                    </div>
+
+                    <!-- Name -->
+                    <div class="grouped-row-inputs">
+                        <div class="label-and-input">
+                            <label for="full-name"
+                                >Full Name
+                                <sup class="required-star">*</sup></label
+                            >
+                            <input
+                                type="text"
+                                name="full-name"
+                                id="full-name"
+                                placeholder="Enter full name"
+                            />
+                            <p class="warning-texts" id="name-warning-text"></p>
+                        </div>
+
+                        <!-- Age -->
+                        <div class="label-and-input">
+                            <label for="age"
+                                >Age <sup class="required-star">*</sup></label
+                            >
+                            <input
+                                type="number"
+                                name="age"
+                                id="age"
+                                placeholder="Enter your age"
+                                min="1"
+                                max="150"
+                            />
+                            <p class="warning-texts" id="age-warning-text"></p>
+                        </div>
+                    </div>
+
+                    <!-- Gender -->
+
+                    <div id="gender-container">
+                        <label>Gender <sup class="required-star">*</sup></label>
+                        <input
+                            type="radio"
+                            name="gender"
+                            id="male"
+                            value="male"
+                        />
+                        <label for="male">Male</label>
+                        <input
+                            type="radio"
+                            name="gender"
+                            id="female"
+                            value="female"
+                        />
+                        <label for="female">Female</label>
+                        <input
+                            type="radio"
+                            name="gender"
+                            id="not-specified"
+                            value="not-specified"
+                        />
+                        <label for="not-specified">Prefer not to say</label>
+                    </div>
+
+                    <!-- CONTACT SECTION -->
+                    <div class="grouped-row-inputs">
+                        <!-- Phone -->
+                        <div class="label-and-input">
+                            <label for="phone-number"
+                                >Contact Number
+                                <sup class="required-star">*</sup></label
+                            >
+                            <input
+                                type="tel"
+                                name="phone-number"
+                                id="phone-number"
+                                placeholder="Enter phone number"
+                            />
+                            <p
+                                class="warning-texts"
+                                id="phone-warning-text"
+                            ></p>
+                        </div>
+                        <!-- Email -->
+                        <div class="label-and-input">
+                            <label for="email"
+                                >Email Address
+                                <sup class="required-star">*</sup></label
+                            >
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                placeholder="Enter email address"
+                            />
+                            <p
+                                class="warning-texts"
+                                id="email-warning-text"
+                            ></p>
+                        </div>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="grouped-row-inputs">
+                        <div class="label-and-input">
+                            <label for="password"
+                                >Password
+                                <sup class="required-star">*</sup></label
+                            >
+                            <input
+                                type="password"
+                                name="password"
+                                id="password"
+                                placeholder="Enter password"
+                            />
+                            <p
+                                class="warning-texts"
+                                id="password-warning-text"
+                            ></p>
+                        </div>
+                        <div class="label-and-input">
+                            <label for="confirm-password"
+                                >Confirm Password
+                                <sup class="required-star">*</sup></label
+                            >
+                            <input
+                                type="password"
+                                name="confirm-password"
+                                id="confirm-password"
+                                placeholder="Confirm password"
+                            />
+                            <p
+                                class="warning-texts"
+                                id="confirm-password-warning-text"
+                            ></p>
+                        </div>
+                    </div>
+
+                    <!-- Subscription Preferences -->
+                    <div>
+                        <label>Subscription Options </label>
+                        <div class="checkboxes">
+                            <input
+                                type="checkbox"
+                                name="subscriptions"
+                                id="important"
+                                value="important"
+                                checked
+                                disabled
+                            />
+                            <label for="important">Accoount Updates</label>
+                        </div>
+                        <div class="checkboxes">
+                            <input
+                                type="checkbox"
+                                name="subscriptions"
+                                id="news"
+                                value="news"
+                            />
+                            <label for="news">News Updates</label>
+                        </div>
+
+                        <div class="checkboxes">
+                            <input
+                                type="checkbox"
+                                name="subscriptions"
+                                id="promos"
+                                value="promotions"
+                            />
+                            <label for="promos">Promotions</label>
+                        </div>
+
+                        <div class="checkboxes">
+                            <input
+                                type="checkbox"
+                                name="subscriptions"
+                                id="events"
+                                value="events"
+                            />
+                            <label for="events">Events and Webinars</label>
+                        </div>
+                    </div>
+
+                    <!-- ADDRESS SECTION -->
+
+                    <div class="label-and-input">
+                        <label for="address"
+                            >Address <sup class="required-star">*</sup></label
+                        >
+
+                        <textarea
+                            name="address"
+                            id="address"
+                            placeholder="Enter address"
+                        ></textarea>
+                        <p class="warning-texts" id="address-warning-text"></p>
+                    </div>
+
+                    <div class="grouped-row-inputs">
+                        <div class="label-and-input">
+                            <label for="city"
+                                >City <sup class="required-star">*</sup></label
+                            >
+                            <input
+                                type="text"
+                                name="city"
+                                id="city"
+                                placeholder="Enter city"
+                            />
+                            <p class="warning-texts" id="city-warning-text"></p>
+                        </div>
+                        <div class="label-and-input">
+                            <label for="state"
+                                >State <sup class="required-star">*</sup></label
+                            >
+                            <input
+                                type="text"
+                                name="state"
+                                id="state"
+                                placeholder="Enter state"
+                            />
+                            <p
+                                class="warning-texts"
+                                id="state-warning-text"
+                            ></p>
+                        </div>
+                    </div>
+                    <div class="grouped-row-inputs">
+                        <div class="label-and-input">
+                            <label for="zip-code"
+                                >Zip Code
+                                <sup class="required-star">*</sup></label
+                            >
+                            <input
+                                type="text"
+                                name="zip-code"
+                                id="zip-code"
+                                placeholder="Enter zip code"
+                            />
+                            <p
+                                class="warning-texts"
+                                id="zip-code-warning-text"
+                            ></p>
+                        </div>
+
+                        <div class="label-and-input">
+                            <label for="country"
+                                >Country
+                                <sup class="required-star">*</sup></label
+                            >
+                            <select name="country" id="country">
+                                <option value="United States">
+                                    United States
+                                </option>
+                                <option value="Canada">Canada</option>
+                                <option value="United Kingdom">
+                                    United Kingdom
+                                </option>
+                                <option value="Germany">Germany</option>
+                                <option value="France">France</option>
+                                <option value="Japan">Japan</option>
+                                <option value="China">China</option>
+                                <option value="India">India</option>
+                                <option value="Australia">Australia</option>
+                                <option value="Brazil">Brazil</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div id="submit-button">Add User</div>
+                </form>
+
+                <!-- IMAGE -->
+                <div id="image-container">
+                    <img
+                        src="../assets/signupImage.webp"
+                        alt="a robot viewing data"
+                    />
+                </div>
+            </div>
+        </div>
+        <script src="form-validation.js"></script>
+    </body>
+</html>
